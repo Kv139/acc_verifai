@@ -1,0 +1,12 @@
+lib/python3.8/site-packages/cv2/cv2.abi3.so
+lib/python3.8/site-packages/carla/libcarla.cpython-38-x86_64-linux-gnu.so
+ 
+*__pycache__
+*.vscode
+# Ignore large files
+
+
+# Ignore Python bytecode
+
+
+# Ignore virtual environments

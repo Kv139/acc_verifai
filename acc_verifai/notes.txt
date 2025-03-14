@@ -1,0 +1,114 @@
+
+MAB - Intermittent Attack
+
+Generated 100 samples in 1016.6885063648224 seconds with 1 workers
+Number of counterexamples: 24
+Sampling time: 0.25145912170410156
+Simulation time: 1016.3638751506805
+Confidence interval: (0.16022461317144718, 0.3357354892709986)
+Displaing counts over all iterations 
+ =========================
+Crash incidents and counts are the following
+CounterExamples: 24
+No crashes: 30
+Attacker crashed: 46
+Car 2 and 3 crashes total 8, 
+ Car 3 and 4 crashes total 70
+Distance minimums between cars was as follows [0, 29, 71]
+****************************************************
+
+MAB - persistent_attack
+
+Generated 100 samples in 470.8671884536743 seconds with 1 workers
+Number of counterexamples: 7
+Sampling time: 0.2456495761871338
+Simulation time: 470.55471086502075
+Confidence interval: (0.028605288907438704, 0.13891972845585732)
+Displaing counts over all iterations 
+ =========================
+Crash incidents and counts are the following
+CounterExamples: 7
+No crashes: 10
+Attacker crashed: 83
+Car 2 and 3 crashes total 1, 
+ Car 3 and 4 crashes total 89
+Distance minimums between cars was as follows [0, 34, 66]
+**************************************************
+* SAVING OUTPUT TO outputs/persistent_attack.csv *
+**************************************************
+
+Cross Entropy - persistent_attack
+
+Generated 100 samples in 461.9956464767456 seconds with 1 workers
+Number of counterexamples: 21
+Sampling time: 0.22320985794067383
+Simulation time: 461.70705938339233
+Confidence interval: (0.13494369570532913, 0.30291537935054064)
+Displaing counts over all iterations 
+ =========================
+Crash incidents and counts are the following
+CounterExamples: 21
+No crashes: 25
+Attacker crashed: 54
+Car 2 and 3 crashes total 11, 
+ Car 3 and 4 crashes total 74
+Distance minimums between cars was as follows [0, 29, 71]
+**************************************************
+* SAVING OUTPUT TO outputs/persistent_attack.csv *
+**************************************************
+
+Cross Entropy - Intermittent Attack
+
+Generated 100 samples in 810.8900969028473 seconds with 1 workers
+Number of counterexamples: 20
+Sampling time: 0.24825644493103027
+Simulation time: 810.5761578083038
+Confidence interval: (0.12665555210195586, 0.2918426890886281)
+Displaing counts over all iterations 
+ =========================
+Crash incidents and counts are the following
+CounterExamples: 20
+No crashes: 29
+Attacker crashed: 51
+Car 2 and 3 crashes total 8, 
+ Car 3 and 4 crashes total 71
+Distance minimums between cars was as follows [0, 29, 71]
+****************************************************
+* SAVING OUTPUT TO outputs/intermittent_attack.csv *
+****************************************************
+
+Simmulated Annealing - intermittent Attack
+
+Generated 100 samples in 949.7408130168915 seconds with 1 workers
+Number of counterexamples: 7
+Sampling time: 0.2298109531402588
+Simulation time: 949.4421689510345
+Confidence interval: (0.028605288907438704, 0.13891972845585732)
+Displaing counts over all iterations 
+ =========================
+Crash incidents and counts are the following
+CounterExamples: 7
+No crashes: 45
+Attacker crashed: 48
+Car 2 and 3 crashes total 2, 
+ Car 3 and 4 crashes total 55
+Distance minimums between cars was as follows [0, 40, 60]
+****************************************************
+* SAVING OUTPUT TO outputs/intermittent_attack.csv *
+
+Simulated Annealing - Persistent Attack
+
+Number of counterexamples: 12
+Sampling time: 0.23828411102294922
+Simulation time: 467.6616325378418
+Confidence interval: (0.06356890256115931, 0.20023568361996882)
+Displaing counts over all iterations 
+ =========================
+Crash incidents and counts are the following
+CounterExamples: 12
+No crashes: 14
+Attacker crashed: 74
+Car 2 and 3 crashes total 8, 
+ Car 3 and 4 crashes total 86
+Distance minimums between cars was as follows [0, 29, 71]
+**************************************************
