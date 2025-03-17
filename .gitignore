@@ -10,3 +10,10 @@ lib/python3.8/site-packages/carla/libcarla.cpython-38-x86_64-linux-gnu.so
 
 
 # Ignore virtual environments
+
+etc/jupyter
+include/site/python3.8/pygame
+lib/python3.8/site-packages
+share
+lib64
+pyvenv.cfg
