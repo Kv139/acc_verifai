@@ -382,7 +382,7 @@ Distance minimums between cars was as follows [0, 110, 390]
  Results 
  
  ============= 
-Results for ./scenarios-dddas/intermittent_attack.scenic running verifai samplerce and 500 iterations 
+Results for ./scenarios-dddas/intermittent_attack.scenic running verifai sampler ce and 500 iterations 
 Generated 500 samples in 4658.330034971237 seconds with 1 workers 
 Number of counterexamples: 11 
 Sampling time: 2.837496280670166 
@@ -403,7 +403,7 @@ Distance minimums between cars was as follows [0, 49, 451]
  Results 
  
  ============= 
-Results for ./scenarios-dddas/persistent_attack.scenic running verifai samplerce and 500 iterations 
+Results for ./scenarios-dddas/persistent_attack.scenic running verifai sampler ce and 500 iterations 
 Generated 500 samples in 2309.084552049637 seconds with 1 workers 
 Number of counterexamples: 122 
 Sampling time: 2.3935344219207764 
@@ -421,31 +421,11 @@ Car 2 and 3 crashes total 68,
 Distance minimums between cars was as follows [0, 128, 372]
  
  
- Results 
- 
- ============= 
-Results for ./scenarios-dddas/persistent_attack.scenic running verifai samplersa and 1 iterations 
-Generated 1 samples in 10.099961519241333 seconds with 1 workers 
-Number of counterexamples: 0 
-Sampling time: 0.012800931930541992 
- Simulation time: 10.081020593643188 
-Confidence interval: (0.0, 0.975) 
-
- Displaing counts over all iterations 
- ========================= 
- Crash incidents and counts are the following 
- CounterExamples: 0 
-No crashes: 0 
-Attacker crashed: 1 
-Car 2 and 3 crashes total 0, 
- Car 3 and 4 crashes total 1 
-Distance minimums between cars was as follows [0, 0, 1]
- 
  
  Results 
  
  ============= 
-Results for ./scenarios-dddas/persistent_attack.scenic running verifai samplersa and 500 iterations 
+Results for ./scenarios-dddas/persistent_attack.scenic running verifai sampler sa and 500 iterations 
 Generated 500 samples in 4494.143172502518 seconds with 1 workers 
 Number of counterexamples: 17 
 Sampling time: 4.269848823547363 
@@ -461,3 +441,68 @@ Attacker crashed: 48
 Car 2 and 3 crashes total 10, 
  Car 3 and 4 crashes total 63 
 Distance minimums between cars was as follows [0, 125, 375]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/persistent_attack.scenic running verifai sample mab and 500 iterations 
+Generated 500 samples in 2455.584861278534 seconds with 1 workers 
+Number of counterexamples: 22 
+Sampling time: 2.74249005317688 
+ Simulation time: 2452.512365579605 
+Confidence interval: (0.02777676728557175, 0.06586100032359485) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 22 
+No crashes: 428 
+Attacker crashed: 50 
+Car 2 and 3 crashes total 14, 
+ Car 3 and 4 crashes total 68 
+Distance minimums between cars was as follows [0, 110, 390]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/intermittent_attack.scenic running verifai sampler mab and 500 iterations 
+Generated 500 samples in 4852.55677986145 seconds with 1 workers 
+Number of counterexamples: 17 
+Sampling time: 6.16132664680481 
+ Simulation time: 4846.009480953217 
+Confidence interval: (0.01992860004620631, 0.0538803507360769) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 17 
+No crashes: 465 
+Attacker crashed: 18 
+Car 2 and 3 crashes total 11, 
+ Car 3 and 4 crashes total 35 
+Distance minimums between cars was as follows [0, 49, 451]
+ 
+
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/intermittent_attack.scenic running verifai sampler mab and 500 iterations #mab with priority 1 
+Generated 500 samples in 5387.411807060242 seconds with 1 workers 
+Number of counterexamples: 120 # verifai is wrong it simply counts rho < 0, not considering first car
+Sampling time: 2.908320903778076 
+ Simulation time: 5384.061289310455 
+Confidence interval: (0.20319657817464953, 0.27990950900327066) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 102 
+No crashes: 278 
+Attacker crashed: 120 
+Car 2 and 3 crashes total 60, 
+ Car 3 and 4 crashes total 222 
+Distance minimums between cars was as follows [0, 87, 413]

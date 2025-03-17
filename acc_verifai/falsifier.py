@@ -319,6 +319,7 @@ def run_experiment(path, parallel=False, model=None,
     print(f"Distance minimums between cars was as follows {monitor.min_dist_counter}")
 
     velocities_df = pd.DataFrame(monitor.velocites)
+    print("Writing out velocities")
     velocities_df.to_csv(path+"_"+str(iterations)+str(sampler_type)+"_velocities.csv",index=False)
 
     return falsifier

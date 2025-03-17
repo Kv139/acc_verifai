@@ -9,7 +9,7 @@ param carla_map = 'Town06'
 param time_step = 1.0/10
 model scenic.simulators.carla.model
 # define the sampler type
-param verifaiSamplerType = 'sa'
+param verifaiSamplerType = 'mab'
 param address = "169.233.195.114"
 
 # Parameters of the scenario.

@@ -75,6 +75,9 @@ class distance_multi(multi_objective_monitor):
         priority_graph.add_node(0)
         priority_graph.add_node(1)
         priority_graph.add_node(2)
+        priority_graph.add_edge(0,1) # prioritize dist between lead car and follower over crashing
+        priority_graph.add_edge(0,2)
+
 
         print(f"Initialized priority graph with {self.num_ojectives} objectives")
 
@@ -339,7 +342,7 @@ def run_experiment(path, parallel=False, model=None,
     print(f"Distance minimums between cars was as follows {monitor.min_dist_counter}")
 
     velocities_df = pd.DataFrame(monitor.velocites)
-    velocities_df.to_csv(path+"_"+str(iterations)+str(sampler_type+"_velocities.csv",index=False)
+    velocities_df.to_csv(path+"_"+str(iterations)+str(sampler_type)+"_velocities.csv",index=False)
 
     return falsifier
 
