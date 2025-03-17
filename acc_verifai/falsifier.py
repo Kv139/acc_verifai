@@ -124,9 +124,10 @@ class distance(specification_monitor):
                     dist_victims.append(min_distances[i])
             
             rho_victims = min(dist_victims)
-            idx = np.argmin(dist_victims)
 
+            idx = np.argmin(dist_victims)
             self.min_dist_counter[idx+1] += 1
+            
             rho_attacker = min_distances[attacker] * (-1)
             rho = max(rho_victims, rho_attacker)
 
