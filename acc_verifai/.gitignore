@@ -1,3 +1,10 @@
 *.csv 
 *__pycache__
 *.vscode
+
+etc/jupyter
+include/site/python3.8/pygame
+lib/python3.8/site-packages
+share
+lib64
+pyvenv.cfg
