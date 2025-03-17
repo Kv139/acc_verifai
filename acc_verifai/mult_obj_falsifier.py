@@ -40,8 +40,8 @@ iteration = 1
 counterex = 1
 route = ""
 
-def create_distances_csv(name, d1, d2, d3, p1, p2, p3, p4):
-    distances = {"c0_c1": [], "c1_c2": [], "c2_c3": [], "p1": [],  "p2": [],  "p3": [],  "p4": []}
+def create_distances_csv(name, d1, d2, d3, p1, p2, p3, p4,v1):
+    distances = {"c0_c1": [], "c1_c2": [], "c2_c3": [], "p1": [],  "p2": [],  "p3": [],  "p4": [], "v1": [] }
     for i in d1:
         distances['c0_c1'].append(i[0])
     for j in d2:
@@ -56,9 +56,11 @@ def create_distances_csv(name, d1, d2, d3, p1, p2, p3, p4):
         distances['p3'].append(x[0])
     for y in p4:
         distances['p4'].append(y[0])        
+    for z in v1:
+        distances['v1'].append(z[1])
     df = pd.DataFrame.from_dict(distances)
     df.to_csv(name + f".csv")
-    
+
 """
 Single-objective specification. This monitor is similar to the one above, but takes a
 minimum over the distances from each vehicle. If the ego vehicle is less than 5 meters
@@ -89,7 +91,7 @@ class distance_multi(multi_objective_monitor):
         self.route = ""
 
         self.velocites = []
-        self.dict_keys = ["attacker_speed", "f1_speed","f2_speed","f3_speed"]
+        self.dict_keys = ["attacker_speed"]
 
 
         self.no_crash = 0
@@ -100,14 +102,10 @@ class distance_multi(multi_objective_monitor):
 
         def specification(simulation):
              
-            ego_velocity = simulation.result.records
             simulation_velocites = []
-            for i in self.dict_keys:
-                simulation_velocites.append(ego_velocity[i])  
-           
-            self.velocites.append(simulation_velocites) 
-
             positions = np.array(simulation.result.trajectory)
+            v1 = simulation.result.records["attacker_speed"]
+
             global route
             self.route = route
             p1 = positions[:, [0], :]
@@ -140,7 +138,6 @@ class distance_multi(multi_objective_monitor):
                     dist_victims.append(min_distances[i])
             
             rho_victims = min(dist_victims)
-           
             idx = np.argmin(dist_victims)
             self.min_dist_counter[idx+1] += 1
            
@@ -341,8 +338,6 @@ def run_experiment(path, parallel=False, model=None,
 
     print(f"Distance minimums between cars was as follows {monitor.min_dist_counter}")
 
-    velocities_df = pd.DataFrame(monitor.velocites)
-    velocities_df.to_csv(path+"_"+str(iterations)+str(sampler_type)+"_velocities.csv",index=False)
 
     return falsifier
 

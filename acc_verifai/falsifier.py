@@ -18,6 +18,7 @@ from verifai.monitor import specification_monitor
 from verifai.falsifier import generic_falsifier
 import pandas as pd
 import random
+import ast
 
 
 def announce(message):
@@ -39,8 +40,8 @@ iteration = 1
 counterex = 1
 route = ""
 
-def create_distances_csv(name, d1, d2, d3, p1, p2, p3, p4):
-    distances = {"c0_c1": [], "c1_c2": [], "c2_c3": [], "p1": [],  "p2": [],  "p3": [],  "p4": []}
+def create_distances_csv(name, d1, d2, d3, p1, p2, p3, p4,v1):
+    distances = {"c0_c1": [], "c1_c2": [], "c2_c3": [], "p1": [],  "p2": [],  "p3": [],  "p4": [], "v1": [] }
     for i in d1:
         distances['c0_c1'].append(i[0])
     for j in d2:
@@ -55,6 +56,8 @@ def create_distances_csv(name, d1, d2, d3, p1, p2, p3, p4):
         distances['p3'].append(x[0])
     for y in p4:
         distances['p4'].append(y[0])        
+    for z in v1:
+        distances['v1'].append(z[1])
     df = pd.DataFrame.from_dict(distances)
     df.to_csv(name + f".csv")
     
@@ -70,14 +73,12 @@ class distance(specification_monitor):
 
         self.simulation_count = 0
 
-        self.velocites = []
-
         self.iteration = 0
         self.counterex = 0
         self.ego_crash = 0
         self.route = ""
 
-        self.dict_keys = ["attacker_speed", "f1_speed","f2_speed","f3_speed"]
+        self.dict_keys = ["attacker_speed"]
 
         self.no_crash = 0
         self.c2_c3_counter = 0
@@ -88,14 +89,9 @@ class distance(specification_monitor):
         def specification(simulation):
             
             simulation_velocites = []
-            
             positions = np.array(simulation.result.trajectory)
-            ego_velocity = simulation.result.records
+            v1 = simulation.result.records["attacker_speed"]
 
-            for i in self.dict_keys:
-                simulation_velocites.append(ego_velocity[i])  
-           
-            self.velocites.append(simulation_velocites) 
            
             global route
             self.route = route
@@ -119,7 +115,7 @@ class distance(specification_monitor):
             
             classify_outcome(rho0,rho1,rho2)
 
-            print(f"Distances between cars respectively {rho0}, {rho1}, {rho2}")
+           # print(f"Distances between cars respectively {rho0}, {rho1}, {rho2}")
             
             attacker = 0
             dist_victims = []
@@ -137,17 +133,17 @@ class distance(specification_monitor):
             if rho>0:
                 if rho_attacker <0:
                     name = self.route+"/distances_" + str(self.iteration) + "_no_cex" # Neet to be able to associate distances file with rho files for classification later 
-                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4) 
+                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1) 
                     self.iteration += 1
               
                 elif rho_attacker >0:
                     name = self.route+"/distances_" + str(self.iteration) + "_attacker_crash"
-                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4)
+                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1)
                     self.iteration += 1
                 
             if rho<0:
                 name = self.route+"/distances_" + str(self.counterex) + "_cex"
-                create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4)
+                create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1)
              
             self.simulation_count += 1 
             return rho
@@ -318,9 +314,9 @@ def run_experiment(path, parallel=False, model=None,
 
     print(f"Distance minimums between cars was as follows {monitor.min_dist_counter}")
 
-    velocities_df = pd.DataFrame(monitor.velocites)
-    print("Writing out velocities")
-    velocities_df.to_csv(path+"_"+str(iterations)+str(sampler_type)+"_velocities.csv",index=False)
+  #  velocities_df = pd.DataFrame(monitor.velocites)
+    #print("Writing out velocities")
+   # velocities_df.to_csv(path+"_"+str(iterations)+str(sampler_type)+"_velocities.csv",index=False)
 
     return falsifier
 

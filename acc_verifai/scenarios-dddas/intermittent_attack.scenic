@@ -106,9 +106,6 @@ c3 = Car at c2.position offset by (C2_TO_C3, 0),
 		
 
 record ego.speed as attacker_speed
-record c1.speed  as f1_speed
-record c2.speed  as f2_speed
-record c3.speed  as f3_speed
 
 
 '''
