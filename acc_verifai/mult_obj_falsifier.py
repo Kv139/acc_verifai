@@ -148,17 +148,17 @@ class distance_multi(multi_objective_monitor):
             if rho>0:
                 if rho_attacker <0:
                     name = self.route+"/distances_" + str(self.iteration) + "_no_cex" # Neet to be able to associate distances file with rho files for classification later 
-                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4) 
+                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1) 
                     self.iteration += 1
               
                 elif rho_attacker >0:
                     name = self.route+"/distances_" + str(self.iteration) + "_attacker_crash"
-                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4)
+                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1)
                     self.iteration += 1
                 
             if rho<0:
                 name = self.route+"/distances_" + str(self.counterex) + "_cex"
-                create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4)
+                create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1)
              
             self.simulation_count += 1 
              
