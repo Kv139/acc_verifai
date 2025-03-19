@@ -661,7 +661,7 @@ Distance minimums between cars was as follows [0, 125, 375]
  Results 
  
  ============= 
-Results for ./scenarios-dddas/persistent_attack_ce.scenic running verifai samplerce and 500 iterations 
+Results for ./scenarios-dddas/persistent_attack_ce.scenic running verifai sampler ce and 500 iterations 
 Generated 500 samples in 2516.731154203415 seconds with 1 workers 
 Number of counterexamples: 141 
 Sampling time: 2.5075104236602783 
