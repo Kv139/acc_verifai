@@ -269,7 +269,8 @@ class generic_parallel_falsifier(parallel_falsifier):
             self.server.terminate()
         samples, rhos = zip(*outputs)
         if isinstance(self.monitor, multi_objective_monitor):
-            counterexamples = [any([r <= self.fal_thres for r in rho]) for rho in rhos]
+            counterexamples = [any([r <= self.fal_thres for r in rho[:1]]) if rho[0] > 0 else False #modified so that the output params file should align with actual counterexamples
+                               for rho in rhos]
         else:
             counterexamples = [r <= self.fal_thres for r in rhos]
         for i, (sample, ce, rho) in enumerate(zip(samples, counterexamples, rhos)):

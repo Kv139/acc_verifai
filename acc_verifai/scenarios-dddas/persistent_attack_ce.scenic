@@ -10,7 +10,7 @@ param time_step = 1.0/10
 model scenic.simulators.carla.model
 # define the sampler type
 param verifaiSamplerType = 'ce'
-param address = "169.233.195.114"
+param address = "169.233.202.19"
 
 # Parameters of the scenario.
 EGO_SPEED  = 20

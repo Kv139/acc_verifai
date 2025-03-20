@@ -100,8 +100,6 @@ class distance(specification_monitor):
             v2 = simulation.result.records["f1_speed"]
             v3 = simulation.result.records["f2_speed"]
             v4 = simulation.result.records["f3_speed"]
-
-
            
             global route
             self.route = route
