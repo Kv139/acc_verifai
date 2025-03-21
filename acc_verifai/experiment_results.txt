@@ -701,7 +701,23 @@ Distance minimums between cars was as follows [0, 116, 384]
  
 
  
-
-
  
+ Results 
+ 
+ ============= 
+Results for scenarios-dddas/persistent_attack_mab.scenic running verifai samplermab and 500 iterations 
+Generated 500 samples in 2627.0430340766907 seconds with 1 workers 
+Number of counterexamples: 56 
+Sampling time: 3.0368258953094482 
+ Simulation time: 2623.617829322815 
+Confidence interval: (0.08572058152768454, 0.14296852269169774) 
 
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 56 
+No crashes: 418 
+Attacker crashed: 26 
+Car 2 and 3 crashes total 27, 
+ Car 3 and 4 crashes total 77 
+Distance minimums between cars was as follows [0, 114, 386]

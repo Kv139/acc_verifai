@@ -282,7 +282,7 @@ def run_experiment(path, parallel=False, model=None,
 
 
     num_objectives = 3
-    iterations = 100
+    iterations = 500
     falsifier_params = DotMap(
         n_iters=iterations,
         save_error_table=True,
