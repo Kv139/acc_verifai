@@ -908,3 +908,45 @@ Attacker crashed: 17
 Car 2 and 3 crashes total 0, 
  Car 3 and 4 crashes total 18 
 Distance minimums between cars was as follows [0, 7, 13]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/intermittent_attack_mab.scenic running verifai samplermab and 500 iterations 
+Generated 500 samples in 10225.735351085663 seconds with 1 workers 
+Number of counterexamples: 46 
+Sampling time: 5.805096626281738 
+ Simulation time: 10219.51368021965 
+Confidence interval: (0.0681433041566544, 0.12080703261074256) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 46 
+No crashes: 389 
+Attacker crashed: 65 
+Car 2 and 3 crashes total 18, 
+ Car 3 and 4 crashes total 111 
+Distance minimums between cars was as follows [0, 68, 432]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/intermittent_attack_mab.scenic running verifai samplermab and 5 iterations 
+Generated 5 samples in 113.68096590042114 seconds with 1 workers 
+Number of counterexamples: 1 
+Sampling time: 0.032790422439575195 
+ Simulation time: 113.6393129825592 
+Confidence interval: (0.005050763379468061, 0.7164179361180895) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 1 
+No crashes: 4 
+Attacker crashed: 0 
+Car 2 and 3 crashes total 0, 
+ Car 3 and 4 crashes total 1 
+Distance minimums between cars was as follows [0, 1, 4]
