@@ -40,8 +40,8 @@ iteration = 1
 counterex = 1
 route = ""
 
-def create_distances_csv(name, d1, d2, d3, p1, p2, p3, p4,v1):
-    distances = {"c0_c1": [], "c1_c2": [], "c2_c3": [], "p1": [],  "p2": [],  "p3": [],  "p4": [], "v1": [] }
+def create_distances_csv(name, d1, d2, d3, p1, p2, p3, p4,v1,v2,v3,v4):
+    distances = {"c0_c1": [], "c1_c2": [], "c2_c3": [], "p1": [],  "p2": [],  "p3": [],  "p4": [], "v1": [], "v2":[], "v3":[],"v4":[] }
     for i in d1:
         distances['c0_c1'].append(i[0])
     for j in d2:
@@ -58,8 +58,15 @@ def create_distances_csv(name, d1, d2, d3, p1, p2, p3, p4,v1):
         distances['p4'].append(y[0])        
     for z in v1:
         distances['v1'].append(z[1])
+    for l in v2:
+        distances["v2"].append(l[1])
+    for m in v3:
+        distances["v3"].append(m[1])
+    for p in v4:
+        distances["v4"].append(p[1])
     df = pd.DataFrame.from_dict(distances)
     df.to_csv(name + f".csv")
+    
 
 """
 Single-objective specification. This monitor is similar to the one above, but takes a
@@ -105,6 +112,9 @@ class distance_multi(multi_objective_monitor):
             simulation_velocites = []
             positions = np.array(simulation.result.trajectory)
             v1 = simulation.result.records["attacker_speed"]
+            v2 = simulation.result.records["f1_speed"]
+            v3 = simulation.result.records["f2_speed"]
+            v4 = simulation.result.records["f3_speed"]
 
             global route
             self.route = route
@@ -148,17 +158,17 @@ class distance_multi(multi_objective_monitor):
             if rho>0:
                 if rho_attacker <0:
                     name = self.route+"/distances_" + str(self.iteration) + "_no_cex" # Neet to be able to associate distances file with rho files for classification later 
-                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1) 
+                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1,v2,v3,v4) 
                     self.iteration += 1
               
                 elif rho_attacker >0:
                     name = self.route+"/distances_" + str(self.iteration) + "_attacker_crash"
-                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1)
+                    create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1,v2,v3,v4)
                     self.iteration += 1
                 
             if rho<0:
                 name = self.route+"/distances_" + str(self.counterex) + "_cex"
-                create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1)
+                create_distances_csv(name, distances0, distances1, distances2, p1, p2, p3, p4,v1,v2,v3,v4)
              
             self.simulation_count += 1 
              
@@ -272,7 +282,7 @@ def run_experiment(path, parallel=False, model=None,
 
 
     num_objectives = 3
-    iterations = 500
+    iterations = 100
     falsifier_params = DotMap(
         n_iters=iterations,
         save_error_table=True,
