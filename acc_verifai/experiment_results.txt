@@ -700,3 +700,211 @@ Car 2 and 3 crashes total 15,
 Distance minimums between cars was as follows [0, 116, 384]
  
  
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/intermittent_attack_mab.scenic running verifai sampler mab and 500 iterations (with priority 1)
+Generated 500 samples in 5964.709944009781 seconds with 1 workers 
+Number of counterexamples: 86 
+Sampling time: 2.859581708908081 
+ Simulation time: 5961.431526422501 
+Confidence interval: (0.13994294757041295, 0.2079925119663506) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 63 
+No crashes: 351 
+Attacker crashed: 86 
+Car 2 and 3 crashes total 33, 
+ Car 3 and 4 crashes total 149 
+Distance minimums between cars was as follows [0, 90, 410]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/persistent_attack_mab.scenic running verifai samplermab and 100 iterations 
+Generated 100 samples in 469.59323358535767 seconds with 1 workers 
+Number of counterexamples: 0 
+Sampling time: 0.5809552669525146 
+ Simulation time: 468.67619156837463 
+Confidence interval: (0.0, 0.03621669264517641) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 13 
+No crashes: 84 
+Attacker crashed: 3 
+Car 2 and 3 crashes total 7, 
+ Car 3 and 4 crashes total 14 
+Distance minimums between cars was as follows [0, 22, 78]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/persistent_attack_mab.scenic running verifai samplermab and 5 iterations 
+Generated 5 samples in 23.509540557861328 seconds with 1 workers 
+Number of counterexamples: 0 
+Sampling time: 0.011938095092773438 
+ Simulation time: 23.489864110946655 
+Confidence interval: (0.0, 0.5218237501049814) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 0 
+No crashes: 0 
+Attacker crashed: 5 
+Car 2 and 3 crashes total 0, 
+ Car 3 and 4 crashes total 5 
+Distance minimums between cars was as follows [0, 2, 3]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/persistent_attack_mab.scenic running verifai samplermab and 5 iterations 
+Generated 5 samples in 23.62536931037903 seconds with 1 workers 
+Number of counterexamples: 0 
+Sampling time: 0.010803937911987305 
+ Simulation time: 23.607173919677734 
+Confidence interval: (0.0, 0.5218237501049814) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 0 
+No crashes: 0 
+Attacker crashed: 5 
+Car 2 and 3 crashes total 0, 
+ Car 3 and 4 crashes total 5 
+Distance minimums between cars was as follows [0, 1, 4]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/persistent_attack_mab.scenic running verifai samplermab and 5 iterations 
+Generated 5 samples in 24.928771257400513 seconds with 1 workers 
+Number of counterexamples: 0 
+Sampling time: 0.011232852935791016 
+ Simulation time: 24.91005778312683 
+Confidence interval: (0.0, 0.5218237501049814) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 0 
+No crashes: 1 
+Attacker crashed: 4 
+Car 2 and 3 crashes total 0, 
+ Car 3 and 4 crashes total 4 
+Distance minimums between cars was as follows [0, 0, 5]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/persistent_attack_mab.scenic running verifai samplermab and 5 iterations 
+Generated 5 samples in 37.96066164970398 seconds with 1 workers 
+Number of counterexamples: 0 
+Sampling time: 0.011701822280883789 
+ Simulation time: 37.94240403175354 
+Confidence interval: (0.0, 0.5218237501049814) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 0 
+No crashes: 1 
+Attacker crashed: 4 
+Car 2 and 3 crashes total 0, 
+ Car 3 and 4 crashes total 4 
+Distance minimums between cars was as follows [0, 3, 2]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/persistent_attack_mab.scenic running verifai samplermab and 5 iterations 
+Generated 5 samples in 38.05010771751404 seconds with 1 workers 
+Number of counterexamples: 0 
+Sampling time: 0.011342525482177734 
+ Simulation time: 38.03237438201904 
+Confidence interval: (0.0, 0.5218237501049814) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 0 
+No crashes: 2 
+Attacker crashed: 3 
+Car 2 and 3 crashes total 0, 
+ Car 3 and 4 crashes total 3 
+Distance minimums between cars was as follows [0, 2, 3]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/persistent_attack_mab.scenic running verifai samplermab and 5 iterations 
+Generated 5 samples in 38.3507719039917 seconds with 1 workers 
+Number of counterexamples: 0 
+Sampling time: 0.012137174606323242 
+ Simulation time: 38.33096766471863 
+Confidence interval: (0.0, 0.5218237501049814) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 0 
+No crashes: 0 
+Attacker crashed: 5 
+Car 2 and 3 crashes total 0, 
+ Car 3 and 4 crashes total 5 
+Distance minimums between cars was as follows [0, 3, 2]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/persistent_attack_mab.scenic running verifai samplermab and 5 iterations 
+Generated 5 samples in 43.202218532562256 seconds with 1 workers 
+Number of counterexamples: 1 
+Sampling time: 0.012543439865112305 
+ Simulation time: 43.18224763870239 
+Confidence interval: (0.005050763379468061, 0.7164179361180895) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 1 
+No crashes: 1 
+Attacker crashed: 3 
+Car 2 and 3 crashes total 1, 
+ Car 3 and 4 crashes total 4 
+Distance minimums between cars was as follows [0, 2, 3]
+ 
+ 
+ Results 
+ 
+ ============= 
+Results for ./scenarios-dddas/persistent_attack_mab.scenic running verifai samplermab and 20 iterations 
+Generated 20 samples in 160.05808234214783 seconds with 1 workers 
+Number of counterexamples: 1 
+Sampling time: 0.047982215881347656 
+ Simulation time: 159.99190020561218 
+Confidence interval: (0.0012650894979498047, 0.24873276277202777) 
+
+ Displaing counts over all iterations 
+ ========================= 
+ Crash incidents and counts are the following 
+ CounterExamples: 1 
+No crashes: 2 
+Attacker crashed: 17 
+Car 2 and 3 crashes total 0, 
+ Car 3 and 4 crashes total 18 
+Distance minimums between cars was as follows [0, 7, 13]

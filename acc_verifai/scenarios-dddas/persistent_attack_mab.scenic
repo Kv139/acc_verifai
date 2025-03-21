@@ -30,7 +30,6 @@ param   frequency =  VerifaiRange (0,   10)
 param   attack_time =  VerifaiRange (0,   10)
 param   inter_vehicle_distance = VerifaiRange(7,30)
 
-
 ############
 # vehicle distances are measured from the center of mass
 # so in reality the bumper to bumper is var - 4.95

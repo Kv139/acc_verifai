@@ -178,13 +178,14 @@ class falsifier(ABC):
         for sample, rho in zip(server_samples, rhos):
           #  ce = any([r <= self.fal_thres for r in rho]) if self.multi else rho <= self.fal_thres
             if self.multi: # Modify so a counterexample is only observed if the first car doesn't crash
-                if rho[0] > 0:
+                if rho[0] < 0:
                     ce = any([r <= self.fal_thres for r in rho[1:]])
-                else:
+                    #print(rho[0])
+                elif rho[0] >=0:
                     ce = False
             else:
                 ce = rho <= self.fal_thres
-
+            print(ce)
             if ce:
                 if self.save_error_table:
                     self.populate_error_table(sample, rho)
@@ -269,7 +270,7 @@ class generic_parallel_falsifier(parallel_falsifier):
             self.server.terminate()
         samples, rhos = zip(*outputs)
         if isinstance(self.monitor, multi_objective_monitor):
-            counterexamples = [any([r <= self.fal_thres for r in rho[:1]]) if rho[0] > 0 else False #modified so that the output params file should align with actual counterexamples
+            counterexamples = [any([r <= self.fal_thres for r in rho[:1]]) if rho[0] < 0 else False #modified so that the output params file should align with actual counterexamples
                                for rho in rhos]
         else:
             counterexamples = [r <= self.fal_thres for r in rhos]
