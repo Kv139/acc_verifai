@@ -1,6 +1,6 @@
 # Installation of VerifAI and Scenic
 
-1. Clone the [VerifAI](https://github.com/BerkeleyLearnVerify/VerifAI) repository and [Scenic](https://github.com/BerkeleyLearnVerify/Scenic) version 2.1.0.
+1. Locally build the modified version of [VerifAI](https://github.com/BerkeleyLearnVerify/VerifAI) provided in the repository and [Scenic](https://github.com/BerkeleyLearnVerify/Scenic) version 2.1.0.
 2. Use python 3.8, higher versions of python might produce conflicts within some of the used libraries. 
 3. Install both repositories, first Scenic then VerifAI. Go to their folders and run `python -m pip install -e` (we recommend installing everything in a virtual enviroment)
 4. Download [Carla](https://carla.org/) (versions 0.9.12-0.9.15 work) 
